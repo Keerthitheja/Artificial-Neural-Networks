@@ -1,0 +1,119 @@
+\documentclass[12pt]{report}
+\usepackage{url}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{floatrow}
+\usepackage[table]{xcolor}
+% Table float box with bottom caption, box width adjusted to content
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{wrapft}
+\usepackage{epsfig}
+\usepackage{setspace}               
+\usepackage[superscript]{cite}      
+\usepackage{graphicx}               
+\usepackage[normalem]{ulem}   		
+\graphicspath{ {Figures/} }         
+\usepackage{caption} 
+\usepackage{cite}
+\usepackage{indentfirst} 
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{amsmath}  				
+\textwidth=6.5in                    
+\oddsidemargin=0.0in 
+\usepackage[margin=0.9in]{geometry}               
+\usepackage{listings}
+\usepackage{fancyhdr} 
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{grffile}
+\DeclareUnicodeCharacter{2212}{\textendash}
+\usepackage[
+separate-uncertainty = true,
+multi-part-units = repeat
+]{siunitx}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ANN Report}
+\rhead{Page \thepage}
+
+\usepackage[table]{xcolor}
+\usepackage{boldline}
+\usepackage{color}   
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	citecolor=black,
+	linktoc=all, 
+	linkcolor=black,
+}
+\usepackage{titlesec}
+\newcommand{\chapfnt}{\fontsize{24}{25}}
+\newcommand{\secfnt}{\fontsize{16}{14}}
+\newcommand{\ssecfnt}{\fontsize{14}{14}}
+\titleformat{\chapter}{\normalfont\chapfnt\bfseries}{\thechapter.}{15pt}{\chapfnt}
+
+\titleformat{\section}
+{\normalfont\secfnt\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\normalfont\ssecfnt\bfseries}{\thesubsection}{1em}{}
+
+\titlespacing*{\chapter} {0pt}{-15pt}{20pt}
+\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\renewcommand{\baselinestretch}{1.1}
+\usepackage{enumitem}
+\newlist{abbrv}{itemize}{1}	
+\pagenumbering{Roman} % Start roman numbering
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+\begin{document}
+	\vspace{5 cm}
+	\begin{figure*}
+		\vspace*{1cm}
+		\begin{flushright}
+			\includegraphics[height=15mm]{KU Leuven logo}
+		\end{flushright}
+	\end{figure*}
+	
+	\begin{center}
+		\vspace*{0.7cm}
+		\textsc{\LARGE Master of Artificial Intelligence}\\[1.0cm]
+		\vspace*{1cm}
+		\HRule \\[0.4cm]
+		{ \huge \bfseries Artificial Neural Networks Course}\\[0.3cm] 
+		{ \huge \bfseries Report}\\[0.3cm] 
+		\HRule \\[1.5cm]
+	\end{center}
+	
+	\begin{minipage}{0.5\textwidth}
+		\vspace*{3cm}
+		\begin{flushleft} \large
+			{\bf Name :} Keerthitheja Samudrala Chandrasekar\\
+			{\bf Student Number :} r0773368
+		\end{flushleft}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\vspace*{3cm}
+		\begin{flushright} \large
+			Prof. Johan Suykens \\
+			Artificial intelligence\\
+			KU Leuven
+			
+		\end{flushright}
+	\end{minipage}\\[2cm]
+	\newpage
+	\tableofcontents
+	\newpage
+	\pagenumbering{arabic}
+
+	\include{Exercise1/Report/Exercise1}
+	\include{Exercise2/Report/Exercise2}
+	\include{Exercise3/Report/Exercise3}
+	\include{Exercise4/Report/Exercise4}
+
+\end{document}
